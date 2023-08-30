@@ -1,0 +1,60 @@
+title Kneel Diamond
+
+participant main.js
+participant User Event
+participant MetalOptions.js
+participant SizeOptions.js
+participant StyleOptions.js
+participant TransientState.js
+participant OrdersList.js
+participant PlaceOrder.js
+participant database.json
+_______
+main.js->MetalOptions.js:Asks for metal html string
+MetalOptions.js->database.json:Asks for array of metals objects
+MetalOptions.js<--database.json:Returns array of metals objects, stores in "metals" variable
+box over MetalOptions.js:Uses .map() to create array of html strings with \nmetal properties\nUses .join to put all html strings into one string
+main.js<--MetalOptions.js:Returns metal html string
+
+MetalOptions.js->User Event:User changes Metal radio button
+MetalOptions.js->TransientState.js:Asks to run setMetalChoice()
+box over TransientState.js:setMetalChoice changes metalId property to metal Id clicked on
+_______
+
+main.js->StyleOptions.js:Asks for style html string
+StyleOptions.js->database.json:Asks for array of styles objects
+StyleOptions.js<--database.json:Returns array of styles objects, stores in "styles" variable
+box over StyleOptions.js:Uses .map() to create array of html strings with \nstyle properties\nUses .join to put all html strings into one string
+main.js<--StyleOptions.js:Returns style html string
+
+StyleOptions.js->User Event:User changes Style radio button
+StyleOptions.js->TransientState.js:Asks to run setStyleChoice()
+box over TransientState.js:setStyleChoice changes styleId property to style Id clicked on
+_______
+
+main.js->SizeOptions.js:Asks for size html string
+SizeOptions.js->database.json:Asks for array of sizes objects
+SizeOptions.js<--database.json:Returns array of sizes objects, stores in "sizes" variable
+box over SizeOptions.js:Uses .map() to create array of html strings with \nsizes properties\nUses .join to put all html strings into one string
+main.js<--SizeOptions.js:Returns size html string
+
+SizeOptions.js->User Event:User changes Size radio button
+SizeOptions.js->TransientState.js:Asks to run setSizeChoice()
+box over TransientState.js:setSizeChoice changes sizeId property to size Id/value clicked on
+_______
+
+main.js->PlaceOrder.js:Asks for button html string
+main.js<--PlaceOrder.js:Returns button html string
+
+PlaceOrder.js->User Event:User clicks Place Order button
+PlaceOrder.js->TransientState.js:handlePlaceOrder() asks to placeOrder()
+TransientState.js->database.json:Sends stringified object to database
+_______
+
+main.js->OrdersList.js:Asks for orders html string
+OrdersList.js->database.json:Asks for array of orders objects
+OrdersList.js<--database.json:Returns array of orders objects, stores in "orders" variable
+box over OrdersList.js:Uses .map() to create array of html strings with \norders properties.\nUses .join() to put all html string into one string
+main.js<--OrdersList.js:Returns orders html string
+
+TransientState.js->main.js:When order is placed, run render() function that updates Orders List
