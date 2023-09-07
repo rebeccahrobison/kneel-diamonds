@@ -5,7 +5,8 @@ export const Orders = async () => {
     let ordersHTML = `<section class="ordersList">`
     const divStringArray = orders.map(
         (order) => {
-            const orderPrice = (order.jewelryOption.multiplier)*(order.metal.price + 
+            const orderPrice = (order.jewelryOption.multiplier) * 
+                               (order.metal.price + 
                                order.style.price + 
                                order.size.price)
             return `<div>Order #${order.id} costs $${parseFloat(orderPrice).toFixed(2)}</div>`

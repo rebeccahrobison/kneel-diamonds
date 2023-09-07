@@ -54,7 +54,9 @@ const render = async () => {
 
 document.addEventListener("newOrderCreated", event => {
     console.log("State of data has changed. Regenerating HTML...")
+    
     render()
+
 })
 
 render()

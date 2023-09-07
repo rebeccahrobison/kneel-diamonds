@@ -4,6 +4,8 @@ const handleMetalChoice = (event) => {
     if(event.target.name === "metal") {
         setMetalChoice(parseInt(event.target.value))
     }
+
+    // console.log(event)
 }
 
 export const MetalOptions = async () => {
@@ -28,3 +30,8 @@ export const MetalOptions = async () => {
 
     return metalsHTML
 }
+
+
+
+    // const customRadioButtonEvent = new CustomEvent("newRadioButtonClicked")
+    // document.dispatchEvent(customRadioButtonEvent)

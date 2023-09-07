@@ -108,6 +108,34 @@
       "styleId": 3,
       "jewelryOptionId": 2,
       "id": 3
+    },
+    {
+      "metalId": 1,
+      "sizeId": 1,
+      "styleId": 3,
+      "jewelryOptionId": 1,
+      "id": 4
+    },
+    {
+      "metalId": 2,
+      "sizeId": 2,
+      "styleId": 3,
+      "jewelryOptionId": 2,
+      "id": 5
+    },
+    {
+      "metalId": 1,
+      "sizeId": 2,
+      "styleId": 3,
+      "jewelryOptionId": 1,
+      "id": 6
+    },
+    {
+      "metalId": 1,
+      "sizeId": 2,
+      "styleId": 3,
+      "jewelryOptionId": 3,
+      "id": 7
     }
   ]
 }
