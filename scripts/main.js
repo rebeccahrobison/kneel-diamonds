@@ -3,6 +3,7 @@ import { SizeOptions } from "./SizeOptions.js"
 import { StyleOptions } from "./StyleOptions.js"
 import { PlaceOrderButton } from "./PlaceOrder.js"
 import { Orders } from "./OrdersList.js"
+import { jewelryOptionOptions } from "./JewelryOptions.js"
 
 const container = document.querySelector('#container')
 
@@ -12,6 +13,7 @@ const render = async () => {
     const stylesHTML = await StyleOptions()
     const buttonHTML = PlaceOrderButton()
     const ordersHTML = await Orders()
+    const jewelriesHTML = await jewelryOptionOptions()
 
     const composedHTML = `
         <h1>Kneel Diamonds</h1>
@@ -31,6 +33,10 @@ const render = async () => {
                 <h2>Styles</h2>
                 ${stylesHTML}
             </section>
+        </article>
+
+        <article class="jewelryChoices">
+            ${jewelriesHTML}
         </article>
 
         <article class="order">

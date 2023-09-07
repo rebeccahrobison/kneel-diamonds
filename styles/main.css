@@ -23,3 +23,19 @@ h1,h2 {
 .customOrders {
     margin: 30px;
 }
+
+.jewelryChoices {
+    display: flex;
+    margin: 20px;
+}
+
+#placeOrder {
+    margin-left: 20px;
+}
+
+button {
+    font-family: inherit;
+    background-color: rgb(226, 74, 28);
+    color: white;
+    padding: 10px;
+}

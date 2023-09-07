@@ -70,79 +70,44 @@
       "price": 1241
     }
   ],
+  "jewelryOptions": [
+    {
+      "id": 1,
+      "style": "Ring",
+      "multiplier": 1
+    },
+    {
+      "id": 2,
+      "style": "Earring",
+      "multiplier": 2
+    },
+    {
+      "id": 3,
+      "style": "Necklace",
+      "multiplier": 4
+    }
+  ],
   "orders": [
-
+    {
+      "metalId": 1,
+      "sizeId": 5,
+      "styleId": 2,
+      "jewelryOptionId": 1,
+      "id": 1
+    },
     {
       "metalId": 5,
+      "sizeId": 4,
+      "styleId": 1,
+      "jewelryOptionId": 3,
+      "id": 2
+    },
+    {
+      "metalId": 3,
       "sizeId": 3,
       "styleId": 3,
+      "jewelryOptionId": 2,
       "id": 3
-    },
-    {
-      "metalId": 1,
-      "sizeId": 3,
-      "styleId": 3,
-      "id": 4
-    },
-    {
-      "metalId": 1,
-      "sizeId": 2,
-      "styleId": 3,
-      "id": 5
-    },
-    {
-      "metalId": 1,
-      "sizeId": 2,
-      "styleId": 3,
-      "id": 6
-    },
-    {
-      "metalId": 5,
-      "sizeId": 3,
-      "styleId": 3,
-      "id": 7
-    },
-    {
-      "metalId": 5,
-      "sizeId": 3,
-      "styleId": 3,
-      "id": 8
-    },
-    {
-      "metalId": 5,
-      "sizeId": 3,
-      "styleId": 3,
-      "id": 9
-    },
-    {
-      "metalId": 5,
-      "sizeId": 3,
-      "styleId": 3,
-      "id": 10
-    },
-    {
-      "metalId": 1,
-      "sizeId": 2,
-      "styleId": 2,
-      "id": 11
-    },
-    {
-      "metalId": 1,
-      "sizeId": 2,
-      "styleId": 2,
-      "id": 12
-    },
-    {
-      "metalId": 2,
-      "sizeId": 4,
-      "styleId": 3,
-      "id": 13
-    },
-    {
-      "metalId": 2,
-      "sizeId": 4,
-      "styleId": 3,
-      "id": 14
     }
   ]
 }
